@@ -24,8 +24,6 @@ export async function POST(req: Request) {
       return new NextResponse("Name cannot be 'general'", { status: 400 });
     }
 
-    // Left: 5:25:30
-
     const server = await db.server.update({
       where: {
         id: serverId,
